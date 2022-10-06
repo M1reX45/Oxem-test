@@ -31,7 +31,7 @@ export const StoreProvider: FC<storeProvider> = ({ children }) => {
 		leasingPeriod: '60',
 	});
 	const [summary, setSummary] = useState({} as summary);
-	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const [isLoading, setIsLoading] = useState(false);
 
 	return (
 		<AppContext.Provider
