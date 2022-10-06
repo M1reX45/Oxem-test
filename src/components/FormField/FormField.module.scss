@@ -1,0 +1,10 @@
+.formField {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+}
+
+.disabled {
+	opacity: 0.4;
+}

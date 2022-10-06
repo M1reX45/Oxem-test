@@ -1,0 +1,16 @@
+@import '../../app/variables.scss';
+
+.title {
+	max-width: 750px;
+	display: block;
+	margin-bottom: 32px;
+	font-size: $titleLarge;
+	min-width: 320px;
+}
+
+@media (max-width: 767px) {
+	.title {
+		min-width: 100%;
+		font-size: $titleSmall;
+	}
+}

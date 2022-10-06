@@ -1,0 +1,45 @@
+@import '../../app/variables.scss';
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $buttonActive;
+	font-family: 'Nekst';
+	font-style: normal;
+	font-weight: 900;
+	font-size: $captionLarge;
+	color: white;
+	border: none;
+	border-radius: 40px;
+	padding: 14px 0px 18px 0px;
+	max-height: 68px;
+	max-width: 426px;
+	min-width: 320px;
+	width: 426px;
+	&:hover {
+		background: $buttonHover;
+	}
+	&:active {
+		background: $buttonPressed;
+	}
+}
+
+.disabled {
+	background: $buttonDisabled;
+	&:hover {
+		background: $buttonDisabled;
+	}
+	&:active {
+		background: $buttonDisabled;
+	}
+}
+
+@media (max-width: 767px) {
+	.button {
+		max-width: 100%;
+		width: 100%;
+		font-size: $captionSmall;
+		min-width: 100%;
+	}
+}

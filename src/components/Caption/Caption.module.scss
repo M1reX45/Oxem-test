@@ -1,0 +1,28 @@
+@import '../../app/variables.scss';
+
+.caption {
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	font-weight: 900;
+	font-size: $captionLarge;
+	color: $textTertiary;
+	border-radius: 16px;
+	width: 70px;
+	&Percent {
+		font-size: $percentSmall;
+		background-color: rgba(224, 224, 224, 0.4);
+	}
+}
+
+@media (max-width: 767px) {
+	.caption {
+		font-size: $captionSmall;
+		width: 66px;
+		&Percent {
+			font-size: $percentLarge;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+@import './variables.scss';
+
+html,
+body {
+	height: 100%;
+}
+
+#root {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Nekst';
+	flex-wrap: wrap;
+}
+
+h1 {
+	font-weight: 900;
+	line-height: 0.9;
+}
+
+span,
+label {
+	font-family: 'Gilroy';
+	font-weight: 400;
+}
+
+span {
+	line-height: 1.5;
+	color: $textSecondary;
+}
+
+label {
+	line-height: 1.25;
+	color: $textTertiary;
+}

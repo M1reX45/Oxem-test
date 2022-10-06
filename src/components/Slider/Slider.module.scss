@@ -1,0 +1,66 @@
+@import '../../app/variables.scss';
+
+@function makelongshadow($color, $size) {
+	$val: 1px 0 0 $size $color;
+	@for $i from 6 through 1024 {
+		$val: #{$val}, -#{$i}px 0 0 $size #{$color};
+	}
+	@return $val;
+}
+
+.slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100%;
+	bottom: -12px;
+	> input {
+		-webkit-appearance: none;
+		width: 89%;
+		min-height: 25px;
+		overflow: hidden;
+		&::-moz-range-thumb {
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			background: $slider;
+			border: none;
+			cursor: pointer;
+		}
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			background: $slider;
+			border: none;
+			cursor: pointer;
+			margin-top: -10px;
+			appearance: none;
+			box-shadow: makelongshadow($slider, -9px);
+		}
+		&::-moz-range-track {
+			width: 100%;
+			height: 1px;
+			cursor: pointer;
+			background: #e1e1e1;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		&::-webkit-slider-runnable-track {
+			-webkit-appearance: none;
+			width: 100%;
+			height: 1px;
+			cursor: pointer;
+			background: #e1e1e1;
+			border-top-left-radius: 10px;
+			border-top-right-radius: 10px;
+		}
+		&::-moz-range-progress {
+			background: $slider;
+			border-top-left-radius: 10px;
+			height: 2px;
+		}
+	}
+}

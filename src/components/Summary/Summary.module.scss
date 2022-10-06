@@ -1,0 +1,44 @@
+@import '../../app/variables.scss';
+
+.summary {
+	max-width: 426px;
+	min-width: 320px;
+	width: 100%;
+	flex: 1 1;
+}
+
+.title {
+	margin-bottom: 8px;
+}
+
+.amount {
+	font-family: 'Nekst';
+	font-size: $summaryLarge;
+	font-weight: 900;
+	line-height: 0.9;
+	color: $textSecondary;
+	> span {
+		font-family: 'Nekst';
+		font-weight: 900;
+		line-height: 0.3;
+	}
+	> .rub {
+		position: relative;
+		top: -5px;
+	}
+}
+
+@media (max-width: 767px) {
+	.summary {
+		min-width: 100%;
+	}
+	.title {
+		margin-bottom: 2px;
+	}
+	.amount {
+		font-size: $summarySmall;
+		> .rub {
+			top: -2px;
+		}
+	}
+}
